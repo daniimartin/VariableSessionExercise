@@ -1,0 +1,25 @@
+﻿@model List<String>
+
+@{
+    ViewBag.Title = "Compra";
+}
+
+<h2>Los ingredientes de tu pizza son:</h2>
+
+@if (Session["PIZZA"] != null)
+{
+    <ul>
+        @foreach(var i in Model)
+        {
+            <li>
+                @i
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <h3 style="color:red">No has seleccionado ingredientes</h3>
+}
+
+@Html.ActionLink("Volver a la lista", "Index", "Session")

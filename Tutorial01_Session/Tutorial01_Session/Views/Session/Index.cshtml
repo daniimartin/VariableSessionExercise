@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="color:red">Haz tu pizza</h2>
+
+<ul>
+    <li>
+        <b>ELIGE LOS INGREDIENTES QUE MÁS TE GUSTEN:</b>
+    </li>
+    <li value="Tomate">
+        Tomate
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Tomate" }, null)
+    </li>
+    <li value="Queso">
+        Queso
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Queso" }, null)
+    </li>
+    <li value="Cebolla">
+        Cebolla
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Cebolla" }, null)
+    </li>
+    
+    <li value="Jamon">
+        Jamón
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Jamon" }, null)
+    </li>
+    <li value="Bacon">
+        Bacon
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Bacon" }, null)
+    </li>
+    <li value="Carne">
+        Carne
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Carne" }, null)
+    </li>
+    <li value="Pollo">
+        Pollo
+        @Html.ActionLink("Almacenar", "Index", "Session", new { ingrediente = "Pollo" }, null)
+    </li>
+</ul>
+
+@Html.ActionLink("Ver pizza", "Compra", "Session") |
+@Html.ActionLink("Borrar ingredientes", "Borrar", "Session")
